@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --clr-primary-soft-blue: hsl(215, 51%, 70%);
+    --clr-primary-cyan: hsl(178, 100%, 50%);
+
+    --clr-main-background: hsl(217, 54%, 11%);
+    --clr-card-background: hsl(216, 50%, 16%);
+    --clr-line: hsl(215, 32%, 27%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --fs-heading: 22px;
+    --fs-body-m: 18px;
+    --fs-body-s: 16px;
+
+    --fh-body: 26px;
+
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-600: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-main-background);
+
+}
+
+.card {
+    width: 327px;
+    background-color: var(--clr-card-background);
+    padding: 24px 24px 32px 24px;
+    border-radius: 15px;
+}
+
+.card-container {
+    width: 278px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.card__image {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.card__title {
+    font-size: var(--fs-heading);
+    color: var(--clr-white);
+}
+
+.card__description {
+    font-size: var(--fs-body-m);
+    color: var(--clr-primary-soft-blue);
+    line-height: var(--fh-body);
+}
+
+.wrapper-value-time {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__value-txt {
+    font-size: var(--fs-body-s);
+    color: var(--clr-primary-cyan);
+}
+
+.card__time-txt {
+    font-size: var(--fs-body-s);
+    color: var(--clr-primary-soft-blue);
+}
+
+.card__line {
+    width: 100%;
+    border: 1px solid var(--clr-line);
+}
+
+.wrapper-creator {
+    display: flex;
+    align-items: center;
+}
+
+.small-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card__creator-txt {
+    font-size: var(--fs-body-s);
+    color: var(--clr-primary-soft-blue);
+    padding-left: 1rem;
+
+}
+
+.card__creator-img {
+    border: 1px solid var(--clr-white);
+    border-radius: 100px;
+    height: 33px;
+}
+
+.card__creator-name {
+    color: var(--clr-white);
+}
+
+.card__title:active,
+.card__title:hover,
+.card__creator-name:active,
+.card__creator-name:hover {
+    color: var(--clr-primary-cyan);
+    cursor: pointer;
+}
+
+@media (min-width: 1440px) {
+    .card {
+        width: 350px;
+    }
+
+    .card-container {
+        width: 302px;
+    }
+}
